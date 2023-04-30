@@ -1,0 +1,47 @@
+﻿ @model MvcCrud.Models.Employee
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-6" offset-3>
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center text-primary">Add Employee</h1>
+                    <p class="text-center text-danger">@TempData["message"]</p>
+                </div>
+                <div class="card-body">
+
+                    <form method="post" asp-action="Create">
+                        <div class="form-group">
+                            <label asp-for="Name"></label>
+                            <input type="text" asp-for="Name" class="form-control" placeholder="Enter Employee Name"/> 
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Age"></label>
+                            <input type="number" asp-for="Age" class="form-control" placeholder="Your Age" />
+                            <span asp-validation-for="Age" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Dept"></label>
+                            <input type="text" asp-for="Dept" class="form-control" placeholder="Your Dept" />
+                            <span asp-validation-for="Dept" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Salary"></label>
+                            <input type="text" asp-for="Salary" class="form-control" placeholder="Your Salary" />
+                            <span asp-validation-for="Salary" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                           
+                           <input type="submit" value="Submit"  class="btn btn-sm btn-outline-success float-right"/>
+                        </div>
+                    </form>
+                </div>
+            
+            </div>
+        </div>
+
+    </div>
+</div>

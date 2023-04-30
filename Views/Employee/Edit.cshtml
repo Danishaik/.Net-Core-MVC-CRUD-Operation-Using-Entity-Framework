@@ -1,0 +1,43 @@
+﻿@model MvcCrud.Models.Employee
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-6" offset-3>
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center text-primary">Edit Employee</h1>
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-action="Edit">
+                        <div class="form-group">
+                            <label asp-for="Name"></label>
+                            <input type="hidden" asp-for="id" />
+                            <input type="text" asp-for="Name" class="form-control" placeholder="Enter Employee Name" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Age"></label>
+                            <input type="text" asp-for="Age" class="form-control" placeholder="Your Age" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Dept"></label>
+                            <input type="text" asp-for="Dept" class="form-control" placeholder="Your Dept" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Salary"></label>
+                            <input type="text" asp-for="Salary" class="form-control" placeholder="Your Salary" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Submit" class="btn btn-sm btn-outline-success float-right" />
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
